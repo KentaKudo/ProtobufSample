@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+message Member {
+    int64 id = 1;
+    string name = 2;
+
+    enum Instrument {
+        VOCAL  = 0;
+        GUITAR = 1;
+        BASS   = 2;
+        DRUMS  = 3;
+    }
+
+    Instrument instrument = 3;
+}
+
+message RockBand {
+    int64 id = 1;
+    string name = 2;
+    repeated Member members = 3;
+}
